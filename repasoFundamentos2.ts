@@ -1,12 +1,12 @@
 export class Mobile {
-    public name: string;
-    public model: string;
-    public trademark: string;
-    public sdSize: number;
-    public color: string;
-    public is5G: boolean;
-    public cameraNumber: number;
-    public price: number;
+    private name: string;
+    private model: string;
+    private trademark: string;
+    private sdSize: number;
+    private color: string;
+    private is5G: boolean;
+    private cameraNumber: number;
+    private price: number;
 
     constructor(name: string, model: string, trademark: string, sdSize: number,
         color: string, is5G: boolean, cameraNumber: number, price: number) {
@@ -66,5 +66,15 @@ export class Mobile {
     }
     getPrice(): number {
         return this.price;
+    }
+    printAll() {
+        console.log("The characteristics of the mobile " + this.name + " are:" + "\n" +
+            "• Name" + ": " + this.name + "\n" +
+            "• Model: " + this.model + "\n" +
+            "• Trademark: " + this.trademark + "\n" +
+            "• SD Size (GB): " + this.sdSize + "\n" +
+            "• Color: " + this.color + "\n" +
+            "• Is 5G?: " + this.is5G + "\n" +
+            "• Number of Cameras: " + this.cameraNumber)
     }
 }
